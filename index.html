@@ -1,382 +1,591 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-  </head>
-  <body>
-    <nav id="desktop-nav">
-      <div class="logo">John Doe</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Bina — Banking Professional Portfolio. Career, education, skills, and family." />
+  <title>Bina | Banking Professional</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ========== PRELOADER ========== -->
+  <div id="preloader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><span>B</span>ina</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#career">Career</a></li>
+          <li class="nav-item"><a class="nav-link" href="#timeline">Life Timeline</a></li>
+          <li class="nav-item"><a class="nav-link" href="#certifications">Courses</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Family</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#family">Family Tree</a></li>
+              <li><a class="dropdown-item" href="roshan.html">Roshan Kumar Deo</a></li>
+              <li><a class="dropdown-item" href="krishab.html">Krishab Dev</a></li>
+              <li><a class="dropdown-item" href="dibyansh.html">Dibyansh Dev</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
         </ul>
       </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">John Doe</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
+    </div>
+  </nav>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section id="hero" class="hero-section">
+    <!-- Hero Image Carousel -->
+    <div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel" data-bs-interval="4000">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="assets/images/hero-bina-1.jpg" alt="Bina hero image 1" />
         </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        <div class="carousel-item">
+          <img src="assets/images/hero-bina-2.jpg" alt="Bina hero image 2" />
+        </div>
+        <div class="carousel-item">
+          <img src="assets/images/hero-bina-3.jpg" alt="Bina hero image 3" />
+        </div>
+        <div class="carousel-item">
+          <img src="assets/images/hero-bina-4.jpg" alt="Bina hero image 4" />
+        </div>
+        <div class="carousel-item">
+          <img src="assets/images/hero-bina-5.jpg" alt="Bina hero image 5" />
         </div>
       </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/profile-pic.png" alt="John Doe profile picture" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">John Doe</h1>
-        <p class="section__text__p2">Frontend Developer</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/resume-example.pdf')"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://linkedin.com/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/'"
-          />
-        </div>
-      </div>
-    </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/about-pic.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>2+ years <br />Frontend Development</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>B.Sc. Bachelors Degree<br />M.Sc. Masters Degree</p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-              reprehenderit et laborum, rem, dolore eum quod voluptate
-              exercitationem nobis, nihil esse debitis maxime facere minus sint
-              delectus velit in eos quo officiis explicabo deleniti dignissimos.
-              Eligendi illum libero dolorum cum laboriosam corrupti quidem,
-              reiciendis ea magnam? Nulla, impedit fuga!
-            </p>
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>I am <span>Bina</span></h1>
+      <p>A dedicated Banking Professional with years of experience in financial services, customer relations, and banking operations.</p>
+      <a href="#about" class="btn btn-hero btn-primary-custom me-2">Discover More</a>
+      <a href="#career" class="btn btn-hero btn-outline-custom">My Career</a>
+    </div>
+    <div class="hero-scroll-indicator">
+      <a href="#about" aria-label="Scroll down"><i class="bi bi-chevron-double-down"></i></a>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT SECTION ========== -->
+  <section id="about" class="section-padding">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5 animate-on-scroll">
+          <div class="about-image-wrapper">
+            <img src="assets/images/bina-about.jpg" alt="Bina — Banking Professional" />
           </div>
         </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SASS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>TypeScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Material UI</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PostgreSQL</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Express JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-1.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project One</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-2.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Two</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-3.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Three</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:examplemail@gmail.com">Example@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com">LinkedIn</a></p>
-        </div>
-      </div>
-    </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+        <div class="col-lg-7 animate-on-scroll delay-2">
+          <h2 class="section-title">About Me</h2>
+          <p class="section-subtitle">Banking Professional | Wife | Mother</p>
+          <p>I am Bina, a committed banking professional with extensive experience in the financial sector. My career has been shaped by a passion for serving customers and a dedication to operational excellence. Beyond the workplace, I am a proud wife and mother of two wonderful sons.</p>
+          <ul class="about-info-list mt-4">
+            <li><strong>Full Name:</strong> Bina Deo</li>
+            <li><strong>Profession:</strong> Banker</li>
+            <li><strong>Experience:</strong> 15+ Years in Banking</li>
+            <li><strong>Specialization:</strong> Retail Banking &amp; Customer Service</li>
+            <li><strong>Languages:</strong> Hindi, English, Maithili</li>
+            <li><strong>Location:</strong> Nepal</li>
           </ul>
         </div>
-      </nav>
-      <p>Copyright &#169; 2023 John Doe. All Rights Reserved.</p>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EDUCATION SECTION ========== -->
+  <section id="education" class="section-padding bg-light-custom">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title mx-auto">Education</h2>
+        <p class="section-subtitle">Academic qualifications and learning journey</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4 animate-on-scroll">
+          <div class="education-card">
+            <div class="year">2002 – 2005</div>
+            <h4>Bachelor of Commerce</h4>
+            <p class="institution">University of Bihar</p>
+            <p class="mt-2">Completed B.Com with focus on accounting, economics, and business management.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 animate-on-scroll delay-1">
+          <div class="education-card">
+            <div class="year">2000 – 2002</div>
+            <h4>Intermediate (12th)</h4>
+            <p class="institution">Senior Secondary School, Bihar</p>
+            <p class="mt-2">Completed higher secondary education with Commerce stream.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 animate-on-scroll delay-2">
+          <div class="education-card">
+            <div class="year">1998 – 2000</div>
+            <h4>Matriculation (10th)</h4>
+            <p class="institution">High School, Bihar</p>
+            <p class="mt-2">Successfully completed secondary education with distinction.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SKILLS SECTION ========== -->
+  <section id="skills" class="section-padding">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title mx-auto">Professional Skills</h2>
+        <p class="section-subtitle">Core competencies developed over years of banking experience</p>
+      </div>
+      <div class="row g-5">
+        <!-- Progress Bars -->
+        <div class="col-lg-6 animate-on-scroll">
+          <div class="skill-bar">
+            <div class="skill-name"><span>Customer Relationship Management</span><span>95%</span></div>
+            <div class="progress"><div class="progress-bar" data-width="95"></div></div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-name"><span>Banking Operations</span><span>90%</span></div>
+            <div class="progress"><div class="progress-bar" data-width="90"></div></div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-name"><span>Financial Analysis</span><span>85%</span></div>
+            <div class="progress"><div class="progress-bar" data-width="85"></div></div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-name"><span>Loan Processing &amp; Credit Assessment</span><span>88%</span></div>
+            <div class="progress"><div class="progress-bar" data-width="88"></div></div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-name"><span>Regulatory Compliance</span><span>80%</span></div>
+            <div class="progress"><div class="progress-bar" data-width="80"></div></div>
+          </div>
+        </div>
+        <!-- Skill Icon Cards -->
+        <div class="col-lg-6">
+          <div class="row g-3">
+            <div class="col-6 animate-on-scroll delay-1">
+              <div class="skill-icon-card">
+                <i class="bi bi-bank2"></i>
+                <h5>Retail Banking</h5>
+                <p>Savings, deposits &amp; account management</p>
+              </div>
+            </div>
+            <div class="col-6 animate-on-scroll delay-2">
+              <div class="skill-icon-card">
+                <i class="bi bi-people"></i>
+                <h5>Team Leadership</h5>
+                <p>Branch staff coordination</p>
+              </div>
+            </div>
+            <div class="col-6 animate-on-scroll delay-3">
+              <div class="skill-icon-card">
+                <i class="bi bi-graph-up-arrow"></i>
+                <h5>Financial Planning</h5>
+                <p>Investment &amp; advisory services</p>
+              </div>
+            </div>
+            <div class="col-6 animate-on-scroll delay-4">
+              <div class="skill-icon-card">
+                <i class="bi bi-shield-check"></i>
+                <h5>Risk Management</h5>
+                <p>KYC, AML &amp; compliance</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CAREER / EMPLOYMENT HISTORY ========== -->
+  <section id="career" class="section-padding bg-light-custom">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title mx-auto">Employment History</h2>
+        <p class="section-subtitle">Professional career journey in the banking industry</p>
+      </div>
+      <div class="timeline">
+        <!-- Item 1 -->
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="date">2018 – Present</span>
+            <h4>Senior Banking Officer</h4>
+            <p>Leading branch operations, managing a team of associates, overseeing loan disbursement and customer engagement programs.</p>
+          </div>
+        </div>
+        <!-- Item 2 -->
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="date">2013 – 2018</span>
+            <h4>Banking Officer</h4>
+            <p>Handled retail banking operations, processed loan applications, managed high-value customer portfolios, and ensured regulatory compliance.</p>
+          </div>
+        </div>
+        <!-- Item 3 -->
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="date">2009 – 2013</span>
+            <h4>Assistant Manager — Operations</h4>
+            <p>Supervised day-to-day banking transactions, cash management, and customer service operations at branch level.</p>
+          </div>
+        </div>
+        <!-- Item 4 -->
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="date">2006 – 2009</span>
+            <h4>Probationary Officer</h4>
+            <p>Started banking career as a PO. Gained hands-on experience in all areas of branch banking including accounts, credits, and customer relations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== LIFE TIMELINE ========== -->
+  <section id="timeline" class="section-padding">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title mx-auto">Life Timeline</h2>
+        <p class="section-subtitle">Milestones and cherished moments through the years</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="date">Birth</span>
+            <h4>Born in Bihar, Nepal</h4>
+            <p>Grew up in a loving family in Bihar with strong values of education and hard work.</p>
+          </div>
+        </div>
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="date">Education Years</span>
+            <h4>Academic Journey</h4>
+            <p>Completed schooling and higher education with focus on Commerce, building the foundation for a banking career.</p>
+          </div>
+        </div>
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="date">Marriage</span>
+            <h4>Married to Roshan Kumar Deo</h4>
+            <p>United in a beautiful ceremony, beginning a lifelong partnership built on love and mutual respect.</p>
+          </div>
+        </div>
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="date">Motherhood</span>
+            <h4>Blessed with Two Sons</h4>
+            <p>Welcomed Krishab Dev and Dibyansh Dev into the family — the greatest joys of life.</p>
+          </div>
+        </div>
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="date">Career Growth</span>
+            <h4>Rising Through the Ranks</h4>
+            <p>Progressed from Probationary Officer to Senior Banking Officer through dedication and excellence.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Life Gallery -->
+      <div class="mt-5 pt-4">
+        <h3 class="text-center mb-4">Photo &amp; Video Gallery</h3>
+        <div class="gallery-grid">
+          <div class="gallery-item animate-on-scroll">
+            <img src="assets/images/Binalife-1.jpg" alt="Life moment 1" />
+            <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+          </div>
+          <div class="gallery-item animate-on-scroll delay-1">
+            <img src="assets/images/Binalife-2.jpg" alt="Life moment 2" />
+            <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+          </div>
+          <div class="gallery-item animate-on-scroll delay-2">
+            <img src="assets/images/Binalife-3.jpg" alt="Life moment 3" />
+            <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+          </div>
+          <div class="gallery-item animate-on-scroll delay-3">
+            <video src="assets/videos/family-video.mp4" muted></video>
+            <div class="gallery-overlay"><i class="bi bi-play-circle"></i></div>
+          </div>
+          <div class="gallery-item animate-on-scroll delay-4">
+            <img src="assets/images/Binalife-4.jpg" alt="Life moment 4" />
+            <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+          </div>
+          <div class="gallery-item animate-on-scroll">
+            <img src="assets/images/Binalife-5.jpg" alt="Life moment 5" />
+            <div class="gallery-overlay"><i class="bi bi-zoom-in"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== COURSES / CERTIFICATIONS ========== -->
+  <section id="certifications" class="section-padding bg-light-custom">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title mx-auto">Courses &amp; Certifications</h2>
+        <p class="section-subtitle">Continuous learning and professional development</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4 animate-on-scroll">
+          <div class="cert-card">
+            <i class="bi bi-patch-check-fill"></i>
+            <h5>JAIIB — Junior Associate of Nepaln Institute of Bankers</h5>
+            <p>Nepaln Institute of Banking &amp; Finance</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 animate-on-scroll delay-1">
+          <div class="cert-card">
+            <i class="bi bi-patch-check-fill"></i>
+            <h5>CAIIB — Certified Associate of Nepaln Institute of Bankers</h5>
+            <p>Nepaln Institute of Banking &amp; Finance</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 animate-on-scroll delay-2">
+          <div class="cert-card">
+            <i class="bi bi-award-fill"></i>
+            <h5>Anti-Money Laundering (AML) Certification</h5>
+            <p>Internal Bank Training Program</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 animate-on-scroll delay-3">
+          <div class="cert-card">
+            <i class="bi bi-mortarboard-fill"></i>
+            <h5>Credit Appraisal &amp; Risk Management</h5>
+            <p>National Institute of Bank Management</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 animate-on-scroll delay-4">
+          <div class="cert-card">
+            <i class="bi bi-laptop"></i>
+            <h5>Digital Banking &amp; Fintech Fundamentals</h5>
+            <p>Online Certification Program</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 animate-on-scroll">
+          <div class="cert-card">
+            <i class="bi bi-person-badge-fill"></i>
+            <h5>Customer Service Excellence</h5>
+            <p>Bank Internal Training Academy</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FAMILY SECTION ========== -->
+  <section id="family" class="section-padding">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title mx-auto">My Family</h2>
+        <p class="section-subtitle">The people who make life truly meaningful</p>
+      </div>
+
+      <!-- Family Tree Visual -->
+      <div class="family-tree mb-5">
+        <!-- Parents Level -->
+        <div class="family-level">
+          <div class="col-10 col-sm-6 col-md-4 col-lg-3 animate-on-scroll delay-2">
+            <a href="index.html" class="text-decoration-none">
+              <div class="family-member-card animate-on-scroll">
+                <div class="member-image-wrapper">
+                  <img src="assets/images/bina-family.jpg" alt="Bina" />
+                  <div class="member-overlay">
+                    <span class="btn-view">View Profile</span>
+                  </div>
+                </div>
+                <div class="member-info">
+                  <span class="relation">Self</span>
+                  <h4>Bina</h4>
+                  <p>Banking Professional</p>
+                  <div class="member-meta">
+                    <span><i class="bi bi-briefcase"></i> Banker</span>
+                    <span><i class="bi bi-geo-alt"></i> Nepal</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+           <div class="col-10 col-sm-6 col-md-4 col-lg-3 animate-on-scroll delay-2">
+            <a href="roshan.html" class="text-decoration-none">
+              <div class="family-member-card animate-on-scroll delay-1">
+                <div class="member-image-wrapper">
+                  <img src="assets/images/roshan-family.jpg" alt="Roshan Kumar Deo" />
+                  <div class="member-overlay">
+                    <span class="btn-view">View Profile</span>
+                  </div>
+                </div>
+                <div class="member-info">
+                  <span class="relation">Husband</span>
+                  <h4>Roshan Kumar Deo</h4>
+                  <p>Loving husband &amp; partner</p>
+                  <div class="member-meta">
+                    <span><i class="bi bi-heart"></i> Life Partner</span>
+                    <span><i class="bi bi-geo-alt"></i> Nepal</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Connector -->
+        <div class="connector"></div>
+
+        <!-- Children Level -->
+        <div class="family-level">
+          <div class="col-10 col-sm-6 col-md-4 col-lg-3 animate-on-scroll delay-2">
+            <a href="krishab.html" class="text-decoration-none">
+              <div class="family-member-card animate-on-scroll delay-2">
+                <div class="member-image-wrapper">
+                  <img src="assets/images/krishab-family.jpg" alt="Krishab Dev" />
+                  <div class="member-overlay">
+                    <span class="btn-view">View Profile</span>
+                  </div>
+                </div>
+                <div class="member-info">
+                  <span class="relation">Son</span>
+                  <h4>Krishab Dev</h4>
+                  <p>Eldest son</p>
+                  <div class="member-meta">
+                    <span><i class="bi bi-book"></i> Student</span>
+                    <span><i class="bi bi-star"></i> Elder Son</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+           <div class="col-10 col-sm-6 col-md-4 col-lg-3 animate-on-scroll delay-2">
+            <a href="dibyansh.html" class="text-decoration-none">
+              <div class="family-member-card animate-on-scroll delay-3">
+                <div class="member-image-wrapper">
+                  <img src="assets/images/dibyansh-family.jpg" alt="Dibyansh Dev" />
+                  <div class="member-overlay">
+                    <span class="btn-view">View Profile</span>
+                  </div>
+                </div>
+                <div class="member-info">
+                  <span class="relation">Son</span>
+                  <h4>Dibyansh Dev</h4>
+                  <p>Youngest son</p>
+                  <div class="member-meta">
+                    <span><i class="bi bi-emoji-smile"></i> Young Learner</span>
+                    <span><i class="bi bi-star"></i> Youngest</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <h5><span class="text-secondary-custom">B</span>ina</h5>
+          <p>A personal portfolio showcasing the career, life, and family of a dedicated banking professional.</p>
+          <div class="social-icons mt-3">
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#career">Career</a></li>
+            <li><a href="#family">Family</a></li>
+            <li><a href="events.html">Special Events</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h5>Family Pages</h5>
+          <ul class="footer-links">
+            <li><a href="roshan.html">Roshan Kumar Deo — Husband</a></li>
+            <li><a href="krishab.html">Krishab Dev — Son</a></li>
+            <li><a href="dibyansh.html">Dibyansh Dev — Son</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Bina Deo. All rights reserved. Built with <i class="bi bi-heart-fill text-secondary-custom"></i></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== GALLERY MODAL ========== -->
+  <div class="modal fade modal-gallery" id="galleryModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-body"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== BACK TO TOP ========== -->
+  <button class="back-to-top" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/script.js"></script>
+</body>
 </html>
